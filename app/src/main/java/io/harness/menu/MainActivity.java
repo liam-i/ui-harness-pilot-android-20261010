@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 
 public final class MainActivity extends Activity {
-    private static final int EXPECTED_CI_COMPILE_FAILURE = ;
     @Override public void onCreate(Bundle saved) {
         super.onCreate(saved);
         MenuScreen screen = new MenuScreen(this, ((MenuApplication)getApplication()).state);
