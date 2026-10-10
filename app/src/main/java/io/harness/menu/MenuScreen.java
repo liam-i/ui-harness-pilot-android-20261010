@@ -59,7 +59,11 @@ public final class MenuScreen extends FrameLayout {
         if (lineHeight > 0) v.setLineSpacing(px(lineHeight) - v.getPaint().getFontMetricsInt(null),1);
         v.measure(MeasureSpec.makeMeasureSpec(px(w),MeasureSpec.EXACTLY),MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED));
         float y=baseline-v.getBaseline()/density;
-        place(parent,v,name,x,y,w,v.getMeasuredHeight()/density); return v;
+        android.text.Layout layout=v.getLayout();
+        int lastBaseline=v.getBaseline()+layout.getLineBaseline(layout.getLineCount()-1)-layout.getLineBaseline(0);
+        // Tight multiline spacing must still contain the last line's full font descent.
+        int height=Math.max(v.getMeasuredHeight(),(int)Math.ceil(lastBaseline+v.getPaint().descent()));
+        place(parent,v,name,x,y,w,height/density); return v;
     }
     private Control control(FrameLayout parent, String name, String copy, float x,float y,float w,float h,
                             String color,boolean border,Runnable action) {
