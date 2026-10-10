@@ -1,0 +1,58 @@
+{
+  "expected_path": "design-inputs/packages/UI-FIGMA-ANDROID-MENU/U001/expected-copy.json",
+  "expected_sha256": "29b47ae955ab09ac1e0dc44198f5a1e206135d0df3d0c748e8841af461322e67",
+  "build_script": "scripts/build-android-menu.py",
+  "test_script": "scripts/test-android-menu.py",
+  "toolchain_files": [
+    {
+      "base": "jdk",
+      "relative": "release",
+      "sha256": "cb6064fe4d7b87d9fbb8b8c7702047044d1bbeac38e0c5217f595579b6cc764b"
+    },
+    {
+      "base": "jdk",
+      "relative": "bin/java",
+      "sha256": "af8b122943345320b179c75c3404d56a981017739746b75f9caf583632f0bea0"
+    },
+    {
+      "base": "gradle_home",
+      "relative": "lib/gradle-launcher-8.13.jar",
+      "sha256": "56a30262647231bf3ab30b2bf090f5ecacff9329d3f1af1a1de73fd1ab4c64b4"
+    },
+    {
+      "base": "gradle",
+      "relative": "",
+      "sha256": "5a7ae6e523747516cc026dea0314023a8e3ee9c89e6c4e975b75b5924b1e7a13"
+    },
+    {
+      "base": "sdk",
+      "relative": "build-tools/35.0.0/source.properties",
+      "sha256": "084847d70abc41284feee7ea717e7c92eab0d1be05f048c27445a359cfe109d8"
+    },
+    {
+      "base": "sdk",
+      "relative": "platforms/android-36/android.jar",
+      "sha256": "d9eb9da824d9e247a352f570f01e1169e725b2954bca9e283a71786c59b59f9a"
+    },
+    {
+      "base": "sdk",
+      "relative": "emulator/emulator",
+      "sha256": "c12c8d72da94cb5abd7f9d2578923d05ff94ea827f0ee593c6e563c96edc0d42"
+    },
+    {
+      "base": "sdk",
+      "relative": "platform-tools/adb",
+      "sha256": "5759ea07285e5a5b66d84f489c118a3fa3998e69cd37725e5a3dc7cbe0597278"
+    },
+    {
+      "base": "sdk",
+      "relative": "system-images/android-37.1/google_apis_playstore_ps16k/arm64-v8a/source.properties",
+      "sha256": "1d3f8955ae6e7b460b468cba1091d55af7e2a8847a30c300dc640190621cb8dc"
+    },
+    {
+      "base": "gradle_cache",
+      "relative": "caches/modules-2/files-2.1/com.android.tools.build/gradle/8.13.2/5975ee61ee7e3f9413fbe10270f230cfb6d227fc/gradle-8.13.2.jar",
+      "sha256": "e494f7ce75ca6c1abff301d4a70b18fdd3d6af855875f4f85082bb7608f041de"
+    }
+  ]
+}

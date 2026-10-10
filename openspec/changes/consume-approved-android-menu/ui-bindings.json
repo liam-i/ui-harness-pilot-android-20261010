@@ -1,0 +1,124 @@
+{
+  "schema_version": "ui-bindings/1",
+  "bindings": [
+    {
+      "consumer": {
+        "kind": "change",
+        "subject": "consume-approved-android-menu",
+        "record_ref": {
+          "repository": "ui-harness-android-menu-20261010",
+          "commit": "1005a464c1b3be70c004223c990ff58eeb0ae7a9",
+          "path": "openspec/changes/consume-approved-android-menu/proposal.md",
+          "sha256": "a26cc8c6da9c1bc042e4929ac3b57ad30574b65dbd6c59f4e2c90f9e7ba55252"
+        }
+      },
+      "applicability": "required",
+      "rationale_ref": {
+        "repository": "ui-harness-android-menu-20261010",
+        "commit": "1005a464c1b3be70c004223c990ff58eeb0ae7a9",
+        "path": "evidence/engineering-review/user-authorization-20261010.json",
+        "sha256": "39bf038b0dd4fac8906d96fe730bc673e9b93918944a910a61cba9424a14cf52"
+      },
+      "approved_releases": [
+        {
+          "approved_release_ref": {
+            "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+            "commit": "c6f8cb0b1bb9db34cf894a383092dee4d5bdbc8d",
+            "path": "design/units/UI-FIGMA-ANDROID-MENU/decisions/approve-U001.yaml",
+            "sha256": "aefb9518a4e0cfbb7db96f2082ebf13be29775c2a2c97efc256d830b236ed002"
+          }
+        }
+      ],
+      "coverage": [
+        {
+          "behavior_ref": "Approved design consumption",
+          "unit": "UI-FIGMA-ANDROID-MENU",
+          "release": "U001",
+          "screen_states": [
+            "menu/default",
+            "menu/resumable",
+            "menu/zero-empty",
+            "menu/zero-resumable",
+            "dialog/reset-empty",
+            "dialog/reset-resumable",
+            "session/active"
+          ]
+        },
+        {
+          "behavior_ref": "Menu and session behavior",
+          "unit": "UI-FIGMA-ANDROID-MENU",
+          "release": "U001",
+          "screen_states": [
+            "menu/default",
+            "menu/resumable",
+            "menu/zero-empty",
+            "menu/zero-resumable",
+            "dialog/reset-empty",
+            "dialog/reset-resumable",
+            "session/active"
+          ]
+        },
+        {
+          "behavior_ref": "Android lifecycle and input",
+          "unit": "UI-FIGMA-ANDROID-MENU",
+          "release": "U001",
+          "screen_states": [
+            "menu/default",
+            "menu/resumable",
+            "menu/zero-empty",
+            "menu/zero-resumable",
+            "dialog/reset-empty",
+            "dialog/reset-resumable",
+            "session/active"
+          ]
+        },
+        {
+          "behavior_ref": "Bounded presentation and evidence",
+          "unit": "UI-FIGMA-ANDROID-MENU",
+          "release": "U001",
+          "screen_states": [
+            "menu/default",
+            "menu/resumable",
+            "menu/zero-empty",
+            "menu/zero-resumable",
+            "dialog/reset-empty",
+            "dialog/reset-resumable",
+            "session/active"
+          ]
+        }
+      ],
+      "allowed_differences": [
+        {
+          "id": "SYSTEM-GLYPHS",
+          "basis": "System rasterization/antialiasing only; exact copy, sizes, weights and wrapping; baseline deviation at most 2 dp; no clipping or missing controls.",
+          "review_ref": {
+            "repository": "ui-harness-android-menu-20261010",
+            "commit": "1005a464c1b3be70c004223c990ff58eeb0ae7a9",
+            "path": "evidence/engineering-review/user-authorization-20261010.json",
+            "sha256": "39bf038b0dd4fac8906d96fe730bc673e9b93918944a910a61cba9424a14cf52"
+          }
+        },
+        {
+          "id": "PIXEL-ROUNDING",
+          "basis": "At most one physical pixel for non-text edge rounding; handle regular source 411.43x914.29 and 412x915 export edge without whole-frame stretching.",
+          "review_ref": {
+            "repository": "ui-harness-android-menu-20261010",
+            "commit": "1005a464c1b3be70c004223c990ff58eeb0ae7a9",
+            "path": "evidence/engineering-review/user-authorization-20261010.json",
+            "sha256": "39bf038b0dd4fac8906d96fe730bc673e9b93918944a910a61cba9424a14cf52"
+          }
+        },
+        {
+          "id": "OS-CHROME",
+          "basis": "Actual system icons and WindowInsets may differ; product content must stay inside them and retain approved layout rules.",
+          "review_ref": {
+            "repository": "ui-harness-android-menu-20261010",
+            "commit": "1005a464c1b3be70c004223c990ff58eeb0ae7a9",
+            "path": "evidence/engineering-review/user-authorization-20261010.json",
+            "sha256": "39bf038b0dd4fac8906d96fe730bc673e9b93918944a910a61cba9424a14cf52"
+          }
+        }
+      ]
+    }
+  ]
+}

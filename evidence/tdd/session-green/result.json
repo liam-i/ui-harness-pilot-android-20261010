@@ -1,0 +1,40 @@
+{
+  "started_at": "2026-10-10T02:14:27.644309+00:00",
+  "sources": [
+    {
+      "path": "app/src/main/java/io/harness/menu/MenuState.java",
+      "sha256": "6150a6de2fd7c0af0e005e0aa2cc857bb0db3c03f0ae0c8dcc9d17b981b2250d"
+    },
+    {
+      "path": "tests/menu-state/MenuStateTest.java",
+      "sha256": "b0dacd31daf722b764f4787face16c947000328416a6a901bc8acaef7ac87ab6"
+    }
+  ],
+  "commands": [
+    {
+      "args": [
+        "/private/tmp/ui-reconciliation-20261009-kd2a3glf/toolchains/jdk-17.0.20.1+1/Contents/Home/bin/javac",
+        "-d",
+        "/private/tmp/menu-state-1lav_vxa",
+        "/private/tmp/ui-reconciliation-20261009-kd2a3glf/android-menu/app/src/main/java/io/harness/menu/MenuState.java",
+        "/private/tmp/ui-reconciliation-20261009-kd2a3glf/android-menu/tests/menu-state/MenuStateTest.java"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "/private/tmp/ui-reconciliation-20261009-kd2a3glf/toolchains/jdk-17.0.20.1+1/Contents/Home/bin/java",
+        "-cp",
+        "/private/tmp/menu-state-1lav_vxa",
+        "io.harness.menu.MenuStateTest"
+      ],
+      "exit": 0,
+      "stdout": "PASS cold process starts with 128 and disabled Continue\nPASS New replaces sessions and Continue preserves identity\nTOTAL 2\n",
+      "stderr": ""
+    }
+  ],
+  "exit": 0,
+  "finished_at": "2026-10-10T02:14:28.164356+00:00"
+}

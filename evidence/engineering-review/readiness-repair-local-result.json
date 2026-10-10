@@ -1,0 +1,18 @@
+{
+  "tested_head": "ecc97b077c5d912a5a36710d9f8443aacc985f63",
+  "failed_ci_run": 38022502716,
+  "failed_ci_preserved": true,
+  "result": "PASS",
+  "native_cases": 32,
+  "devices": 2,
+  "regression_cases": 6,
+  "rejection_cases": 14,
+  "apk_sha256": "cfb4acc29d28f1272693840a826bf0b3686efc2087c33de41e5066bad6415aeb",
+  "native_evidence_sha256": "59f1208f547bab907218d6cffd9e57442995e4a4afd2f00e2a7ed38480f98278",
+  "before_and_after_current": true,
+  "settings_restored": true,
+  "product_design_expected_cases_and_timeouts_unchanged": true,
+  "repair_remote_ci": "not yet authorized or executed",
+  "runtime_human_acceptance": false,
+  "next": "Approve the concrete supplementary remote operation, then push the fixed candidate and use one ephemeral Runner for run 6; retain run 5 as failed."
+}
