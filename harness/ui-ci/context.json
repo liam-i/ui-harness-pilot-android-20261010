@@ -2,7 +2,7 @@
   "business_repository": "ui-harness-android-menu-20261010",
   "ui_repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
   "policy_path": "harness/ui-design/config/project.json",
-  "bindings_path": "openspec/changes/consume-approved-android-menu/ui-bindings.json",
+  "bindings_path": "openspec/changes/archive/2026-10-10-consume-approved-android-menu/ui-bindings.json",
   "snapshot": {
     "schema_version": "ui-snapshot/1",
     "mode": "current",
