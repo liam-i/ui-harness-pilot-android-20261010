@@ -29,6 +29,13 @@ class Suite:
         if check and r.returncode:raise RuntimeError(str(entry))
         return r.stdout if binary else r.stdout.decode(errors='replace').strip()
     def shell(self,*args,**kw):return self.command(['shell',*args],**kw)
+    def until(self,read,predicate,label):
+        end=min(self.case_deadline,self.suite_deadline,time.monotonic()+10);actual=None
+        while time.monotonic()<end:
+            actual=read()
+            if predicate(actual):return actual
+            time.sleep(.08)
+        raise AssertionError(label+': '+str(actual))
     def check(self,label,actual,expected):
         result={'label':label,'actual':actual,'expected':expected,'passed':actual==expected}
         if self.cases:self.cases[-1]['assertions'].append(result)
@@ -53,7 +60,8 @@ class Suite:
     def cold(self):
         previous=self.shell('pidof',PACKAGE,check=False)
         self.shell('am','force-stop',PACKAGE)
-        self.check('force-stop removes process',self.shell('pidof',PACKAGE,check=False),'')
+        gone=self.until(lambda:self.shell('pidof',PACKAGE,check=False),lambda p:p=='','force-stop process termination')
+        self.check('force-stop removes process',gone,'')
         self.shell('run-as',PACKAGE,'rm','-f','files/observation.json')
         self.shell('am','start','-W','-n',ACTIVITY)
         pid=self.shell('pidof',PACKAGE);o=self.state()
@@ -163,13 +171,14 @@ class Suite:
                 m=self.state(best,sid,after=d['capturedAt']);self.menu_assert(m)
             s=self.prepared(best,True,active=True);self.shell('input','keyevent','4')
             m=self.state(best,s['state']['session'],after=s['capturedAt']);self.menu_assert(m)
-        self.shell('input','keyevent','4');f=self.foreground();self.check('root Back leaves foreground',any(PACKAGE in v for v in f),False)
+        self.shell('input','keyevent','4');f=self.until(self.foreground,lambda rows:not any(PACKAGE in v for v in rows),'root Back foreground');self.check('root Back leaves foreground',any(PACKAGE in v for v in f),False)
         (self.out/'A11-system-foreground.json').write_text(json.dumps(f,indent=2)+'\n')
     def case_A12(self):
         for best in [128,0]:
             for label,session,active,modal in [('empty',False,False,False),('menu',True,False,False),('session',True,True,False),('empty-modal',False,False,True),('session-modal',True,False,True)]:
                 before=self.prepared(best,session,active,modal);self.shell('input','keyevent','3')
-                self.check('Home yields system',any(PACKAGE in x for x in self.foreground()),False)
+                foreground=self.until(self.foreground,lambda rows:not any(PACKAGE in v for v in rows),'Home foreground')
+                self.check('Home yields system',any(PACKAGE in x for x in foreground),False)
                 self.check('Home preserves actual pid',self.shell('pidof',PACKAGE),str(before['pid']))
                 self.shell('am','start','-W','-n',ACTIVITY)
                 after=self.observe(lambda v:v['state']==before['state'],before['capturedAt'])
