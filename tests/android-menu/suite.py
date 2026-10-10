@@ -89,7 +89,7 @@ class Suite:
         if modal:o=self.click_state('reset-best',o,best=best,session=o['state']['session'],modal=True)
         return o
     def xml(self,name):
-        self.shell('uiautomator','dump','/sdcard/harness-menu.xml')
+        self.shell('uiautomator','dump','--compressed','/sdcard/harness-menu.xml')
         raw=self.shell('cat','/sdcard/harness-menu.xml');(self.out/(name+'.xml')).write_text(raw)
         return list(ET.fromstring(raw).iter('node'))
     def screenshot(self,name,o=None):
@@ -171,13 +171,13 @@ class Suite:
                 m=self.state(best,sid,after=d['capturedAt']);self.menu_assert(m)
             s=self.prepared(best,True,active=True);self.shell('input','keyevent','4')
             m=self.state(best,s['state']['session'],after=s['capturedAt']);self.menu_assert(m)
-        self.shell('input','keyevent','4');f=self.until(self.foreground,lambda rows:not any(PACKAGE in v for v in rows),'root Back foreground');self.check('root Back leaves foreground',any(PACKAGE in v for v in f),False)
+        self.shell('input','keyevent','4');f=self.until(self.foreground,lambda rows:bool(rows) and not any(PACKAGE in v for v in rows),'root Back foreground');self.check('root Back leaves foreground',any(PACKAGE in v for v in f),False)
         (self.out/'A11-system-foreground.json').write_text(json.dumps(f,indent=2)+'\n')
     def case_A12(self):
         for best in [128,0]:
             for label,session,active,modal in [('empty',False,False,False),('menu',True,False,False),('session',True,True,False),('empty-modal',False,False,True),('session-modal',True,False,True)]:
                 before=self.prepared(best,session,active,modal);self.shell('input','keyevent','3')
-                foreground=self.until(self.foreground,lambda rows:not any(PACKAGE in v for v in rows),'Home foreground')
+                foreground=self.until(self.foreground,lambda rows:bool(rows) and not any(PACKAGE in v for v in rows),'Home foreground')
                 self.check('Home yields system',any(PACKAGE in x for x in foreground),False)
                 self.check('Home preserves actual pid',self.shell('pidof',PACKAGE),str(before['pid']))
                 self.shell('am','start','-W','-n',ACTIVITY)

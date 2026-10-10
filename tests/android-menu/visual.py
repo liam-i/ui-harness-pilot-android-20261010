@@ -76,7 +76,7 @@ def validate_visual(s,o,data,geometry_only=False):
         baselines.update({'score-caption':[base+(27 if large else 24)],'best':[base+(79 if large else 64)],
                           'continue-label':[continue_y+(36 if large else 34)],'new-label':[shapes['new-game'][1]+(36 if large else 34)],
                           'reset-label':[reset_y+(32 if large else 30)]})
-        baselines['footer']=[524+dy_top if compact else refh-50+dy_bottom]
+        baselines['footer']=[524+dy_top if compact else refh-(51 if large else 50)+dy_bottom]
         for name,x,y in [('arrow',196 if large else 185.5,continue_y+16),('reset-icon',51 if large else 71.5,reset_y+12)]:
             x+=shapes['continue'][0];shapes[name]=[x,y,x+24,y+24]
         if family=='dialog-reset-empty':
