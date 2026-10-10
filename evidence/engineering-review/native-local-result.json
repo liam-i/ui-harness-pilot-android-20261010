@@ -1,0 +1,83 @@
+{
+  "tested_head": "ed65683d9e562801b362e71d2d990c49564fefd7",
+  "apk": {
+    "path": "/private/tmp/ui-reconciliation-20261009-kd2a3glf/android-ci-local-04/build/app-debug.apk",
+    "sha256": "cfb4acc29d28f1272693840a826bf0b3686efc2087c33de41e5066bad6415aeb",
+    "bytes": 29583
+  },
+  "cases": 32,
+  "case_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A11",
+    "A12",
+    "A13",
+    "A14",
+    "A15",
+    "A16"
+  ],
+  "devices": [
+    {
+      "key": "small",
+      "name": "Harness_UI_Small_20261009",
+      "serial": "emulator-5580",
+      "identity": {
+        "fingerprint": "google/sdk_gphone16k_arm64/emu64a16k:17/CP31.260618.005/15731206:user/dev-keys",
+        "api": "37",
+        "abi": "arm64-v8a",
+        "page_size": "16384",
+        "size": "Physical size: 720x1280",
+        "density": "Physical density: 320"
+      },
+      "original_settings": {
+        "font_scale": "1.0",
+        "accelerometer_rotation": "0",
+        "user_rotation": "0"
+      },
+      "restored_settings": {
+        "font_scale": "1.0",
+        "accelerometer_rotation": "0",
+        "user_rotation": "0"
+      }
+    },
+    {
+      "key": "regular",
+      "name": "Harness_UI_Regular_20261009",
+      "serial": "emulator-5582",
+      "identity": {
+        "fingerprint": "google/sdk_gphone16k_arm64/emu64a16k:17/CP31.260618.005/15731206:user/dev-keys",
+        "api": "37",
+        "abi": "arm64-v8a",
+        "page_size": "16384",
+        "size": "Physical size: 1080x2400",
+        "density": "Physical density: 420"
+      },
+      "original_settings": {
+        "font_scale": "1.3",
+        "accelerometer_rotation": "1",
+        "user_rotation": "0"
+      },
+      "restored_settings": {
+        "font_scale": "1.3",
+        "accelerometer_rotation": "1",
+        "user_rotation": "0"
+      }
+    }
+  ],
+  "current_before": "ci-inputs-before-final-03.json",
+  "current_after": "ci-inputs-after-final-03.json",
+  "raw_archive_sha256": "432de13dd3bdfe2de4da749ebde18c996e73a4a111b97526f1104d97ee4eb8b9",
+  "hosted_ci": false,
+  "human_runtime_acceptance": false,
+  "engineering_review_sha256": "3bb57fb50e586244021fcd2a279747e893bf3c39f7c44e8786183be7ad5987bd",
+  "design_D": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+  "approval_A": "c6f8cb0b1bb9db34cf894a383092dee4d5bdbc8d"
+}
