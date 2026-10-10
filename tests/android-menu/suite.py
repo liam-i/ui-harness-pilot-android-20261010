@@ -70,6 +70,13 @@ class Suite:
         return o
     def touch(self,o,x,y):self.shell('input','tap',str(round(x)),str(round(y)));return o['capturedAt']
     def tap(self,name,o):
+        def ready(candidate):
+            n=self.node(candidate,name);b=n['bounds']
+            return n['visible'] and b[2]>b[0] and b[3]>b[1]
+        # Native state can be published before its replacement controls are laid out.
+        # Keep the same process/state and existing observation deadline; disabled controls remain tappable.
+        if not ready(o):
+            o=self.observe(lambda v:v['process']==o['process'] and v['state']==o['state'] and ready(v),o['capturedAt'])
         b=self.node(o,name)['bounds'];return self.touch(o,(b[0]+b[2])/2,(b[1]+b[3])/2)
     def click_state(self,name,o,**expected):return self.state(after=self.tap(name,o),**expected)
     def new_game(self,o):

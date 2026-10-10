@@ -1,0 +1,1384 @@
+{
+  "source_run": "https://github.com/liam-i/ui-harness-pilot-android-20261010/actions/runs/38022502716",
+  "case": "regular/A14",
+  "unlaid": {
+    "package": "io.harness.menu",
+    "pid": 7415,
+    "process": "901e41dc-cf3e-4b87-b9ff-97e7a142228a",
+    "capturedAt": 1791605255063,
+    "frame": 40,
+    "density": 2.625,
+    "fontScale": 1,
+    "orientation": 1,
+    "width": 1080,
+    "height": 2400,
+    "insets": [
+      0,
+      63,
+      0,
+      63
+    ],
+    "state": {
+      "screen": "menu/zero-empty",
+      "best": 0,
+      "session": "",
+      "modal": false
+    },
+    "loaded": {
+      "tokens.json": "cd1095044ca4e5e270dc788a43b76615bb37b6adc62cd708a888809c0c56eb72",
+      "asset-arrow.png": "4679df5d9e43ec326cf339f1674b5b24693ee9498767e3ad9a0292d0e5aba5e4",
+      "asset-reset.png": "7fb2df2ba768b634bf1ae49bfe556fcbcfc36d5179800a08e83bdc487e71440f"
+    },
+    "tokens": {
+      "status": "unapproved candidate; properties read from native Figma UI and actual SVG exports",
+      "units": {
+        "layout": "dp",
+        "text": "sp",
+        "source": "1 Figma unit = 1 dp; see handoff for export edge rounding"
+      },
+      "colors": {
+        "cream": "#FAF7EF",
+        "ink": "#423B2E",
+        "secondary_text": "#6B6254",
+        "panel": "#F4EFE3",
+        "border": "#DED3BF",
+        "paper": "#FFFDF6",
+        "accent": "#F6BE39"
+      },
+      "font": {
+        "family": "Roboto / matching Android sans-serif",
+        "letter_spacing": 0,
+        "embedded_font_file": false,
+        "title": {
+          "sp": 64,
+          "weight": 700
+        },
+        "label": {
+          "sp": 12,
+          "weight": 500
+        },
+        "body": {
+          "sp": 16,
+          "weight": 400
+        },
+        "button": {
+          "sp": 18,
+          "weight": 500
+        },
+        "score": {
+          "sp": 36,
+          "weight": 500
+        },
+        "dialog_title": {
+          "sp": 26,
+          "weight": 700
+        },
+        "tile": {
+          "sp": 40,
+          "weight": 500
+        },
+        "scales": [
+          1,
+          1.3
+        ]
+      },
+      "layout": {
+        "max_content_width_dp": 312,
+        "minimum_side_padding_dp": 24,
+        "content_vertical_padding_dp": 12,
+        "reference_top_system_dp": 24,
+        "reference_bottom_system_dp": 32,
+        "actual_system_insets_authoritative": true,
+        "button_height_dp": 56,
+        "minimum_touch_height_dp": 48,
+        "button_radius_dp": 16,
+        "score_radius_dp": 20,
+        "dialog_width_dp": 312,
+        "dialog_radius_dp": 28,
+        "dialog_padding_dp": 24,
+        "dialog_height_f100_dp": 203,
+        "dialog_height_f130_dp": 258,
+        "overlay_ink_alpha": 0.4,
+        "board_dp": 264,
+        "board_padding_dp": 12,
+        "tile_gap_dp": 12,
+        "tile_dp": 114,
+        "tile_radius_dp": 12,
+        "small_f130_menu_section_gap_dp": 12,
+        "small_f130_action_gap_dp": 8,
+        "small_f130_session_section_gap_dp": 8
+      },
+      "geometry_reference": "reference-geometry.json",
+      "note": "This file is a normalized handoff, not a claim that Figma variable collections or modes were configured. Figma source uses local color styles and native properties."
+    },
+    "nodes": [
+      {
+        "name": "root",
+        "class": "io.harness.menu.MenuScreen",
+        "bounds": [
+          0,
+          0,
+          1080,
+          2400
+        ],
+        "visible": true,
+        "visibleBounds": [
+          0,
+          0,
+          1080,
+          2400
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 0,
+        "accessibilityClass": "android.widget.FrameLayout",
+        "contentDescription": null,
+        "fill": "#FFFAF7EF"
+      },
+      {
+        "name": "content",
+        "class": "android.widget.FrameLayout",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 0,
+        "accessibilityClass": "android.widget.FrameLayout",
+        "contentDescription": null
+      },
+      {
+        "name": "eyebrow",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "A LITTLE EVERY DAY",
+          "size": 31.5,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 29,
+          "lines": [
+            {
+              "baseline": 29,
+              "width": 296.02734375,
+              "left": 261,
+              "text": "A LITTLE EVERY DAY",
+              "ellipsis": 0,
+              "ascent": -29.2236328125,
+              "descent": 7.6904296875
+            }
+          ]
+        }
+      },
+      {
+        "name": "title",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "2048",
+          "size": 168,
+          "weight": 700,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 156,
+          "lines": [
+            {
+              "baseline": 156,
+              "width": 384,
+              "left": 217,
+              "text": "2048",
+              "ellipsis": 0,
+              "ascent": -155.859375,
+              "descent": 41.015625
+            }
+          ]
+        }
+      },
+      {
+        "name": "tagline",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Make room for your next move.",
+          "size": 42,
+          "weight": 400,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 39,
+          "lines": [
+            {
+              "baseline": 39,
+              "width": 578.296875,
+              "left": 120,
+              "text": "Make room for your next move.",
+              "ellipsis": 0,
+              "ascent": -38.96484375,
+              "descent": 10.25390625
+            }
+          ]
+        }
+      },
+      {
+        "name": "score-card",
+        "class": "android.widget.FrameLayout",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 0,
+        "accessibilityClass": "android.widget.FrameLayout",
+        "contentDescription": null,
+        "fill": "#FFFFFDF6",
+        "radius": 53
+      },
+      {
+        "name": "score-caption",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "YOUR BEST",
+          "size": 31.5,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 29,
+          "lines": [
+            {
+              "baseline": 29,
+              "width": 163.5625,
+              "left": 327,
+              "text": "YOUR BEST",
+              "ellipsis": 0,
+              "ascent": -29.2236328125,
+              "descent": 7.6904296875
+            }
+          ]
+        }
+      },
+      {
+        "name": "best",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "0",
+          "size": 94.5,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 88,
+          "lines": [
+            {
+              "baseline": 88,
+              "width": 53,
+              "left": 383,
+              "text": "0",
+              "ellipsis": 0,
+              "ascent": -87.6708984375,
+              "descent": 23.0712890625
+            }
+          ]
+        }
+      },
+      {
+        "name": "continue",
+        "class": "io.harness.menu.MenuScreen$Control",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": false,
+        "clickable": true,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.Button",
+        "contentDescription": null,
+        "fill": "#FFF4EFE3",
+        "radius": 42
+      },
+      {
+        "name": "continue-label",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 0.3799999952316284,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Continue",
+          "size": 47.25,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 44,
+          "lines": [
+            {
+              "baseline": 44,
+              "width": 189,
+              "left": 0,
+              "text": "Continue",
+              "ellipsis": 0,
+              "ascent": -43.83544921875,
+              "descent": 11.53564453125
+            }
+          ]
+        }
+      },
+      {
+        "name": "arrow",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 0.3799999952316284,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.ImageView",
+        "contentDescription": null,
+        "asset": "asset-arrow.png",
+        "bitmapWidth": 72,
+        "bitmapHeight": 72
+      },
+      {
+        "name": "new-game",
+        "class": "io.harness.menu.MenuScreen$Control",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": true,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.Button",
+        "contentDescription": null,
+        "fill": "#FFF6BE39",
+        "radius": 42
+      },
+      {
+        "name": "new-label",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "New game",
+          "size": 47.25,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 44,
+          "lines": [
+            {
+              "baseline": 44,
+              "width": 223,
+              "left": 298,
+              "text": "New game",
+              "ellipsis": 0,
+              "ascent": -43.83544921875,
+              "descent": 11.53564453125
+            }
+          ]
+        }
+      },
+      {
+        "name": "reset-best",
+        "class": "io.harness.menu.MenuScreen$Control",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": true,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.Button",
+        "contentDescription": null,
+        "fill": "#FFFAF7EF",
+        "radius": 42
+      },
+      {
+        "name": "reset-icon",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.ImageView",
+        "contentDescription": null,
+        "asset": "asset-reset.png",
+        "bitmapWidth": 72,
+        "bitmapHeight": 72
+      },
+      {
+        "name": "reset-label",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Reset best score",
+          "size": 47.25,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 44,
+          "lines": [
+            {
+              "baseline": 44,
+              "width": 352.5625,
+              "left": 0,
+              "text": "Reset best score",
+              "ellipsis": 0,
+              "ascent": -43.83544921875,
+              "descent": 11.53564453125
+            }
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "class": "android.widget.TextView",
+        "bounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible": false,
+        "visibleBounds": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Swipe. Combine. Keep going.",
+          "size": 42,
+          "weight": 400,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 39,
+          "lines": [
+            {
+              "baseline": 39,
+              "width": 541.46875,
+              "left": 138,
+              "text": "Swipe. Combine. Keep going.",
+              "ellipsis": 0,
+              "ascent": -38.96484375,
+              "descent": 10.25390625
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "laid": {
+    "package": "io.harness.menu",
+    "pid": 7415,
+    "process": "901e41dc-cf3e-4b87-b9ff-97e7a142228a",
+    "capturedAt": 1791605255091,
+    "frame": 41,
+    "density": 2.625,
+    "fontScale": 1,
+    "orientation": 1,
+    "width": 1080,
+    "height": 2400,
+    "insets": [
+      0,
+      63,
+      0,
+      63
+    ],
+    "state": {
+      "screen": "menu/zero-empty",
+      "best": 0,
+      "session": "",
+      "modal": false
+    },
+    "loaded": {
+      "tokens.json": "cd1095044ca4e5e270dc788a43b76615bb37b6adc62cd708a888809c0c56eb72",
+      "asset-arrow.png": "4679df5d9e43ec326cf339f1674b5b24693ee9498767e3ad9a0292d0e5aba5e4",
+      "asset-reset.png": "7fb2df2ba768b634bf1ae49bfe556fcbcfc36d5179800a08e83bdc487e71440f"
+    },
+    "tokens": {
+      "status": "unapproved candidate; properties read from native Figma UI and actual SVG exports",
+      "units": {
+        "layout": "dp",
+        "text": "sp",
+        "source": "1 Figma unit = 1 dp; see handoff for export edge rounding"
+      },
+      "colors": {
+        "cream": "#FAF7EF",
+        "ink": "#423B2E",
+        "secondary_text": "#6B6254",
+        "panel": "#F4EFE3",
+        "border": "#DED3BF",
+        "paper": "#FFFDF6",
+        "accent": "#F6BE39"
+      },
+      "font": {
+        "family": "Roboto / matching Android sans-serif",
+        "letter_spacing": 0,
+        "embedded_font_file": false,
+        "title": {
+          "sp": 64,
+          "weight": 700
+        },
+        "label": {
+          "sp": 12,
+          "weight": 500
+        },
+        "body": {
+          "sp": 16,
+          "weight": 400
+        },
+        "button": {
+          "sp": 18,
+          "weight": 500
+        },
+        "score": {
+          "sp": 36,
+          "weight": 500
+        },
+        "dialog_title": {
+          "sp": 26,
+          "weight": 700
+        },
+        "tile": {
+          "sp": 40,
+          "weight": 500
+        },
+        "scales": [
+          1,
+          1.3
+        ]
+      },
+      "layout": {
+        "max_content_width_dp": 312,
+        "minimum_side_padding_dp": 24,
+        "content_vertical_padding_dp": 12,
+        "reference_top_system_dp": 24,
+        "reference_bottom_system_dp": 32,
+        "actual_system_insets_authoritative": true,
+        "button_height_dp": 56,
+        "minimum_touch_height_dp": 48,
+        "button_radius_dp": 16,
+        "score_radius_dp": 20,
+        "dialog_width_dp": 312,
+        "dialog_radius_dp": 28,
+        "dialog_padding_dp": 24,
+        "dialog_height_f100_dp": 203,
+        "dialog_height_f130_dp": 258,
+        "overlay_ink_alpha": 0.4,
+        "board_dp": 264,
+        "board_padding_dp": 12,
+        "tile_gap_dp": 12,
+        "tile_dp": 114,
+        "tile_radius_dp": 12,
+        "small_f130_menu_section_gap_dp": 12,
+        "small_f130_action_gap_dp": 8,
+        "small_f130_session_section_gap_dp": 8
+      },
+      "geometry_reference": "reference-geometry.json",
+      "note": "This file is a normalized handoff, not a claim that Figma variable collections or modes were configured. Figma source uses local color styles and native properties."
+    },
+    "nodes": [
+      {
+        "name": "root",
+        "class": "io.harness.menu.MenuScreen",
+        "bounds": [
+          0,
+          0,
+          1080,
+          2400
+        ],
+        "visible": true,
+        "visibleBounds": [
+          0,
+          0,
+          1080,
+          2400
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 0,
+        "accessibilityClass": "android.widget.FrameLayout",
+        "contentDescription": null,
+        "fill": "#FFFAF7EF"
+      },
+      {
+        "name": "content",
+        "class": "android.widget.FrameLayout",
+        "bounds": [
+          0,
+          0,
+          1080,
+          2400
+        ],
+        "visible": true,
+        "visibleBounds": [
+          0,
+          0,
+          1080,
+          2400
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 0,
+        "accessibilityClass": "android.widget.FrameLayout",
+        "contentDescription": null
+      },
+      {
+        "name": "eyebrow",
+        "class": "android.widget.TextView",
+        "bounds": [
+          130,
+          97,
+          950,
+          134
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          97,
+          950,
+          134
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "A LITTLE EVERY DAY",
+          "size": 31.5,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 126,
+          "lines": [
+            {
+              "baseline": 126,
+              "width": 296.02734375,
+              "left": 391,
+              "text": "A LITTLE EVERY DAY",
+              "ellipsis": 0,
+              "ascent": -29.2236328125,
+              "descent": 7.6904296875
+            }
+          ]
+        }
+      },
+      {
+        "name": "title",
+        "class": "android.widget.TextView",
+        "bounds": [
+          130,
+          143,
+          950,
+          341
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          143,
+          950,
+          341
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "2048",
+          "size": 168,
+          "weight": 700,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 299,
+          "lines": [
+            {
+              "baseline": 299,
+              "width": 384,
+              "left": 348,
+              "text": "2048",
+              "ellipsis": 0,
+              "ascent": -155.859375,
+              "descent": 41.015625
+            }
+          ]
+        }
+      },
+      {
+        "name": "tagline",
+        "class": "android.widget.TextView",
+        "bounds": [
+          130,
+          355,
+          950,
+          405
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          355,
+          950,
+          405
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Make room for your next move.",
+          "size": 42,
+          "weight": 400,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 394,
+          "lines": [
+            {
+              "baseline": 394,
+              "width": 578.296875,
+              "left": 250,
+              "text": "Make room for your next move.",
+              "ellipsis": 0,
+              "ascent": -38.96484375,
+              "descent": 10.25390625
+            }
+          ]
+        }
+      },
+      {
+        "name": "score-card",
+        "class": "android.widget.FrameLayout",
+        "bounds": [
+          130,
+          935,
+          950,
+          1176
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          935,
+          950,
+          1176
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 0,
+        "accessibilityClass": "android.widget.FrameLayout",
+        "contentDescription": null,
+        "fill": "#FFFFFDF6",
+        "radius": 53
+      },
+      {
+        "name": "score-caption",
+        "class": "android.widget.TextView",
+        "bounds": [
+          130,
+          969,
+          949,
+          1006
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          969,
+          949,
+          1006
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "YOUR BEST",
+          "size": 31.5,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 998,
+          "lines": [
+            {
+              "baseline": 998,
+              "width": 163.5625,
+              "left": 457,
+              "text": "YOUR BEST",
+              "ellipsis": 0,
+              "ascent": -29.2236328125,
+              "descent": 7.6904296875
+            }
+          ]
+        }
+      },
+      {
+        "name": "best",
+        "class": "android.widget.TextView",
+        "bounds": [
+          130,
+          1015,
+          949,
+          1127
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          1015,
+          949,
+          1127
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "0",
+          "size": 94.5,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 1103,
+          "lines": [
+            {
+              "baseline": 1103,
+              "width": 53,
+              "left": 513,
+              "text": "0",
+              "ellipsis": 0,
+              "ascent": -87.6708984375,
+              "descent": 23.0712890625
+            }
+          ]
+        }
+      },
+      {
+        "name": "continue",
+        "class": "io.harness.menu.MenuScreen$Control",
+        "bounds": [
+          130,
+          1239,
+          950,
+          1386
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          1239,
+          950,
+          1386
+        ],
+        "enabled": false,
+        "clickable": true,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.Button",
+        "contentDescription": null,
+        "fill": "#FFF4EFE3",
+        "radius": 42
+      },
+      {
+        "name": "continue-label",
+        "class": "android.widget.TextView",
+        "bounds": [
+          402,
+          1284,
+          614,
+          1340
+        ],
+        "visible": true,
+        "visibleBounds": [
+          402,
+          1284,
+          614,
+          1340
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 0.3799999952316284,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Continue",
+          "size": 47.25,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 1328,
+          "lines": [
+            {
+              "baseline": 1328,
+              "width": 189,
+              "left": 402,
+              "text": "Continue",
+              "ellipsis": 0,
+              "ascent": -43.83544921875,
+              "descent": 11.53564453125
+            }
+          ]
+        }
+      },
+      {
+        "name": "arrow",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          617,
+          1281,
+          680,
+          1344
+        ],
+        "visible": true,
+        "visibleBounds": [
+          617,
+          1281,
+          680,
+          1344
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 0.3799999952316284,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.ImageView",
+        "contentDescription": null,
+        "asset": "asset-arrow.png",
+        "bitmapWidth": 72,
+        "bitmapHeight": 72
+      },
+      {
+        "name": "new-game",
+        "class": "io.harness.menu.MenuScreen$Control",
+        "bounds": [
+          130,
+          1418,
+          950,
+          1565
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          1418,
+          950,
+          1565
+        ],
+        "enabled": true,
+        "clickable": true,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.Button",
+        "contentDescription": null,
+        "fill": "#FFF6BE39",
+        "radius": 42
+      },
+      {
+        "name": "new-label",
+        "class": "android.widget.TextView",
+        "bounds": [
+          130,
+          1463,
+          949,
+          1519
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          1463,
+          949,
+          1519
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "New game",
+          "size": 47.25,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 1507,
+          "lines": [
+            {
+              "baseline": 1507,
+              "width": 223,
+              "left": 428,
+              "text": "New game",
+              "ellipsis": 0,
+              "ascent": -43.83544921875,
+              "descent": 11.53564453125
+            }
+          ]
+        }
+      },
+      {
+        "name": "reset-best",
+        "class": "io.harness.menu.MenuScreen$Control",
+        "bounds": [
+          130,
+          1596,
+          950,
+          1722
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          1596,
+          950,
+          1722
+        ],
+        "enabled": true,
+        "clickable": true,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.Button",
+        "contentDescription": null,
+        "fill": "#FFFAF7EF",
+        "radius": 42
+      },
+      {
+        "name": "reset-icon",
+        "class": "android.widget.ImageView",
+        "bounds": [
+          318,
+          1628,
+          381,
+          1691
+        ],
+        "visible": true,
+        "visibleBounds": [
+          318,
+          1628,
+          381,
+          1691
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.ImageView",
+        "contentDescription": null,
+        "asset": "asset-reset.png",
+        "bitmapWidth": 72,
+        "bitmapHeight": 72
+      },
+      {
+        "name": "reset-label",
+        "class": "android.widget.TextView",
+        "bounds": [
+          402,
+          1631,
+          949,
+          1687
+        ],
+        "visible": true,
+        "visibleBounds": [
+          402,
+          1631,
+          949,
+          1687
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 2,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Reset best score",
+          "size": 47.25,
+          "weight": 500,
+          "letterSpacing": 0,
+          "color": "#FF423B2E",
+          "baseline": 1675,
+          "lines": [
+            {
+              "baseline": 1675,
+              "width": 352.5625,
+              "left": 402,
+              "text": "Reset best score",
+              "ellipsis": 0,
+              "ascent": -43.83544921875,
+              "descent": 11.53564453125
+            }
+          ]
+        }
+      },
+      {
+        "name": "footer",
+        "class": "android.widget.TextView",
+        "bounds": [
+          130,
+          2251,
+          950,
+          2301
+        ],
+        "visible": true,
+        "visibleBounds": [
+          130,
+          2251,
+          950,
+          2301
+        ],
+        "enabled": true,
+        "clickable": false,
+        "alpha": 1,
+        "importantForAccessibility": 1,
+        "accessibilityClass": "android.widget.TextView",
+        "contentDescription": null,
+        "text": {
+          "copy": "Swipe. Combine. Keep going.",
+          "size": 42,
+          "weight": 400,
+          "letterSpacing": 0,
+          "color": "#FF6B6254",
+          "baseline": 2290,
+          "lines": [
+            {
+              "baseline": 2290,
+              "width": 541.46875,
+              "left": 269,
+              "text": "Swipe. Combine. Keep going.",
+              "ellipsis": 0,
+              "ascent": -38.96484375,
+              "descent": 10.25390625
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

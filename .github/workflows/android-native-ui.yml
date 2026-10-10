@@ -45,11 +45,11 @@ jobs:
           "$UI_DESIGN_PYTHON" -B harness/ui-design/ci/check_inputs.py \
             --root "$PWD" --head "$CHECKED_SHA" --config harness/ui-ci/context.json \
             --ui-repository "$RUNNER_TEMP/android-ui-authority" --output "$RUNNER_TEMP/android-evidence/ui-inputs.json"
-      - name: Verify platform result rejection
+      - name: Verify platform rejection and interaction readiness
         shell: bash
         run: |
           set -euo pipefail
-          "$UI_DESIGN_PYTHON" -B -m unittest discover -s tests/android-menu -p test_ci_adapter.py -v
+          "$UI_DESIGN_PYTHON" -B -m unittest discover -s tests/android-menu -p 'test_*.py' -v
       - name: Build and execute exact native matrix
         shell: bash
         run: |
