@@ -1,0 +1,15 @@
+{
+  "args": [
+    "npm",
+    "run",
+    "spec",
+    "--",
+    "validate",
+    "consume-approved-android-menu",
+    "--strict",
+    "--no-interactive"
+  ],
+  "exit": 0,
+  "stdout": "\n> spec\n> HARNESS_OPENSPEC_SOURCE=local bash scripts/openspec.sh validate consume-approved-android-menu --strict --no-interactive\n\nChange 'consume-approved-android-menu' is valid\n",
+  "stderr": ""
+}
