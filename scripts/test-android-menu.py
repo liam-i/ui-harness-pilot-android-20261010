@@ -41,7 +41,11 @@ try:
         serial='emulator-'+str(5580+2*index);name='Harness_UI_'+('Small' if key=='small' else 'Regular')+'_20261009'
         device=dict(device_expected,key=key,name=name);item={'key':key,'name':name,'serial':serial,'cases':[]};r['devices'].append(item);save()
         # The selected existing AVD must reference the approved system image, not merely spoof matching dimensions.
-        avd_config=Path(c['avds'])/(name+'.avd')/'config.ini'
+        locator=Path(c['avds'])/(name+'.ini')
+        locator_values=dict(line.split('=',1) for line in locator.read_text().splitlines() if '=' in line)
+        avd_directory=Path(locator_values['path']).resolve()
+        assert avd_directory.is_relative_to(Path(c['avds']).resolve()),'AVD must stay inside the dedicated trial directory'
+        avd_config=avd_directory/'config.ini'
         config=avd_config.read_text();item['avd_config_sha256']=hashlib.sha256(config.encode()).hexdigest();item['avd_config']=config
         image_path=replaced=device_expected['system_image_package'].replace(';','/')+'/'
         assert any(line.strip()=='image.sysdir.1='+image_path for line in config.splitlines()),'AVD image package differs'
