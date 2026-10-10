@@ -100,8 +100,18 @@ class Suite:
         xml=self.xml(name)
         # Accessibility query completes first; then require another real draw of the same state.
         # Capturing immediately after CPU onDraw can still read the previous compositor buffer.
+        deadline=min(self.case_deadline,self.suite_deadline,time.monotonic()+10)
         fresh=self.observe(lambda v:v['state']==o['state'] and v['frame']>o['frame'],o['capturedAt'])
-        self.check('layout stable across native frames',fresh['nodes']==o['nodes'],True)
+        while time.monotonic()<deadline:
+            previous=fresh
+            fresh=self.observe(lambda v:v['state']==o['state'] and v['frame']>previous['frame']
+                               and v['capturedAt']-previous['capturedAt']>=350,previous['capturedAt'])
+            if fresh['nodes']==previous['nodes'] and fresh['insets']==previous['insets']:break
+        else:raise AssertionError('Native layout/insets did not settle within 10 seconds')
+        self.check('layout stable across native frames',fresh['nodes']==previous['nodes'],True)
+        # Initial system-bar insets may legitimately arrive after the first cold-start frame.
+        # All subsequent comparisons use this actually settled observation, not the earlier geometry.
+        o.clear();o.update(fresh)
         raw=self.screenshot(name,fresh)
         (self.out/(name+'.json')).write_text(json.dumps(fresh,indent=2)+'\n');return raw,xml
     def menu_assert(self,o):

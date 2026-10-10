@@ -53,11 +53,12 @@ def validate_visual(s,o,data,geometry_only=False):
         half=.5 if border else 0
         x=float(r.get('x',0))-half+dx;y=float(r.get('y',0))-half+anchor
         return [x,y,x+float(r['width'])+2*half,y+float(r['height'])+2*half]
-    shapes={};colors={};baselines={}
+    shapes={};colors={};baselines={};radii={}
+    def radius(r):return float(r['rx'])+(.5 if float(r['rx']) in [19.5,15.5] else 0)
     if family=='session-active':
         for name,r in zip(['board','tile-0','tile-1','tile-2','tile-3','menu-back'],product):
             anchor=dy_top if compact else dy_bottom if name=='menu-back' else dy_mid
-            shapes[name]=rect(r,anchor);colors[name]=r['fill']
+            shapes[name]=rect(r,anchor);colors[name]=r['fill'];radii[name]=radius(r)
         baselines={'session-title':[108,195] if large else [91,158],
                    'session-copy':[241 if compact else 245] if large else [199]}
         for name in baselines:baselines[name]=[x+dy_top for x in baselines[name]]
@@ -65,7 +66,7 @@ def validate_visual(s,o,data,geometry_only=False):
         baselines['menu-label']=[shapes['menu-back'][1]+(36 if large else 34)]
     else:
         for name,r in zip(['score-card','continue','new-game'],product[:3]):
-            shapes[name]=rect(r,dy_top if compact else dy_mid);colors[name]=r['fill']
+            shapes[name]=rect(r,dy_top if compact else dy_mid);colors[name]=r['fill'];radii[name]=radius(r)
         # The reset hit area is the final 48 dp of the actual exported action clip.
         clips=[e for e in tree.iter() if e.tag.endswith('clipPath')]
         action=[r.attrib for c in clips for r in c if r.tag.endswith('rect') and float(r.get('height',0)) in [176,184]][-1]
@@ -80,7 +81,7 @@ def validate_visual(s,o,data,geometry_only=False):
         for name,x,y in [('arrow',196 if large else 185.5,continue_y+16),('reset-icon',51 if large else 71.5,reset_y+12)]:
             x+=shapes['continue'][0];shapes[name]=[x,y,x+24,y+24]
         if family=='dialog-reset-empty':
-            for name,r in zip(['dialog','cancel','confirm-reset'],product[3:]):shapes[name]=rect(r,dy_mid);colors[name]=r['fill']
+            for name,r in zip(['dialog','cancel','confirm-reset'],product[3:]):shapes[name]=rect(r,dy_mid);colors[name]=r['fill'];radii[name]=radius(r)
             dialog_y=shapes['dialog'][1]
             baselines.update({'dialog-title':[dialog_y+(56 if large else 48)],
                               'dialog-copy':[dialog_y+x for x in ([100,131,162] if large else [84,108])],
@@ -94,6 +95,7 @@ def validate_visual(s,o,data,geometry_only=False):
         metrics['shape_deltas_px'][name]=deltas
         if max(map(abs,deltas))>1.01:failures.append(('shape',name,deltas))
         if name in colors and n.get('fill')!='#FF'+colors[name][1:]:failures.append(('fill',name,n.get('fill'),colors[name]))
+        if name in radii and abs(n.get('radius',-1)-radii[name]*d)>1.01:failures.append(('radius',name,n.get('radius'),radii[name]*d))
     controls=['cancel','confirm-reset'] if o['state']['modal'] else ['menu-back'] if family=='session-active' else ['continue','new-game','reset-best']
     for i,name in enumerate(controls):
         b=s.node(o,name)['bounds'];x,y,r,bottom=[v/d for v in b]
@@ -103,6 +105,10 @@ def validate_visual(s,o,data,geometry_only=False):
             c=s.node(o,other)['bounds'];overlap=min(min(b[2],c[2])-max(b[0],c[0]),min(b[3],c[3])-max(b[1],c[1]))
             if overlap>0:failures.append(('overlap',name,other))
     if not geometry_only:
+        if family!='session-active':
+            for name in ['continue-label','arrow']:
+                actual=s.node(o,name)['alpha'];target=1 if o['state']['session'] else .38
+                if abs(actual-target)>.001:failures.append(('Continue alpha',name,actual,target))
         for name,role in ROLES.items():
             matches=[n for n in o['nodes'] if n['name']==name]
             if not matches:continue
