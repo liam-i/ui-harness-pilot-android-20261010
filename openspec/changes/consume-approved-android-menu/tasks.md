@@ -19,7 +19,7 @@
 
 ## 4. CI 与交付
 
-- [ ] 4.1 取得具体远程授权后配置所审公开试点／PR／临时 Runner 及 required check，完成真实正向 CI。
+- [x] 4.1 取得具体远程授权后配置所审公开试点／PR／临时 Runner 及 required check，完成真实正向 CI。
 - [ ] 4.2 完成真实平台失败／恢复、共同输入缺失／恢复，验证失败／缺项／零项／跳过／取消／超时／身份不符均阻断。
 - [ ] 4.3 在不依赖活动 Figma 时独立恢复包、源码和必要产物；取得实际运行验收及归档授权后同步 Spec、归档并保存本地提交，撤销 Runner／关闭本次设备。
 - [ ] 4.4 更新唯一补充汇总及准确支持范围；Figma 读、写分别记证，Android／Unity 各自验收，不因本分支通过宣称整轮完成。
@@ -32,3 +32,9 @@
 - Task 2.1：`evidence/tdd/{initial,session,reset,back}-{red,green}` 保存真实行为断言及源副本；最后 6 项 Java 状态测试通过，未计入设备用例。
 
 - 本地整链：干净源码 `ed65683d9e562801b362e71d2d990c49564fefd7`，实际 APK `cfb4acc29d28f1272693840a826bf0b3686efc2087c33de41e5066bad6415aeb`，两台各 A01–A16 完整 32/32、前后 current 及设置恢复通过。`evidence/engineering-review/native-local-result.json` 保存绑定；原全部失败留在教程补充验证证据。Tasks 2.2–3.3 已满足，唯一下一动作是审核具体 CI 上传清单，获授权后接续 4.1；远程、运行人审、归档尚未执行。
+
+## 最新接续记录：CI 第五轮失败后的本地修复
+
+2026-10-10：已获原固定远程授权，公开库／PR #1、required check 及前四轮 CI 均符合预期；正向和编译恢复各 32/32，Task 4.1 完成。第五轮输入恢复后 regular/A14 因测试驱动点击未布局控件而失败，两个后续用例未运行；原失败保留，Task 4.2 仍未完成。五台 Runner 均已撤销。
+
+本地最小修复 `ecc97b077c5d912a5a36710d9f8443aacc985f63` 保持产品、D/A、32 项分母、阈值及超时不变；新增六项回归实际 RED/GREEN，连同原 14 项共 20 项通过，随后两模拟器原生 32/32、前后 current 和清理通过。固定结果见 `evidence/engineering-review/readiness-repair-local-result.json`。此交接提交仅保存结果和本 Tasks；下一动作是审核具体修复源码上传与第六次临时 Runner，获授权后接续 Task 4.2，不重跑前五轮。运行人审、归档、合并和产品发布尚未授权／执行。
