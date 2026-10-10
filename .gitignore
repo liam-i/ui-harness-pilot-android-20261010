@@ -1,0 +1,8 @@
+node_modules/
+.harness/
+.gradle/
+**/build/
+local.properties
+__pycache__/
+*.pyc
+.temporary/

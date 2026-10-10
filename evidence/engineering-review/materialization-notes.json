@@ -1,0 +1,5 @@
+{
+  "wrapper": "scripts/openspec.sh copied unchanged from actual existing template; the reviewed openspec.mjs spelling was a path estimate, no new wrapper invented",
+  "node_modules": "Read-only source copied from existing Cocos pilot exact OpenSpec dependency tree; no global install",
+  "app_code_created": false
+}

@@ -1,0 +1,29 @@
+{
+  "checked_at": "2026-10-10T02:08:15.364034+00:00",
+  "review_manifest_sha256": "3bb57fb50e586244021fcd2a279747e893bf3c39f7c44e8786183be7ad5987bd",
+  "reviewed_files": 8,
+  "local_links_checked": 117,
+  "local_link_failures": [],
+  "json_parsed": 10,
+  "proposal_requirements": 4,
+  "scenarios": 10,
+  "sole_tasks": 12,
+  "device_cases": 32,
+  "flows": 18,
+  "states": 7,
+  "design_review_bytes_unchanged": true,
+  "publication_inventory_unchanged": true,
+  "confirmed_plan_unchanged": true,
+  "main_repository_head_unchanged": "ee56347d6a214b0dc930a0e42879ee4dbb2aad43",
+  "main_repository_staged_files": 0,
+  "consumer_created": false,
+  "apply_started": false,
+  "note": "Static planning and delivery checks only; actual menu build, devices and CI were not run.",
+  "markdownlint": {
+    "scope": "Three current status/approval pages and all Android engineering-review Markdown",
+    "final_exit": 0,
+    "configuration": "repository .markdownlint.jsonc, no disabled rules",
+    "initial_issue": "MD041 on Design/Tasks initially; added H1 to all three standard Artifact documents, preserving official inner sections, then all passed",
+    "command": "markdownlint engineering-harness/tests/ui-design/evidence/supplementary-20261009/README.md engineering-harness/tests/ui-design/evidence/supplementary-20261009/figma-android-design/README.md engineering-harness/tests/ui-design/evidence/supplementary-20261009/figma-android-design/review/approval/README.md 'engineering-harness/tests/ui-design/evidence/supplementary-20261009/android-engineering-review/**/*.md'"
+  }
+}

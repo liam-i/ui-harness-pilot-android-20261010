@@ -1,0 +1,62 @@
+# 目标合同人工填写示例；完整严格模型见schemas/ui.schema.json。尖括号必须替换。
+schema_version: ui-design/1
+unit: UI-001
+release: U001
+producer:
+  mode: mixed # team / ai / mixed；仅溯源，不改变下游审核
+  tool_observation_ref: sources.md # 包内文件也须登记在 files
+brief_ref: brief.md
+requirement_refs:
+  - repository: <需求仓库或可恢复仓库身份>
+    commit: <已存在的完整提交>
+    path: <本轮需求或任务文件>
+    sha256: <实际64位摘要>
+platforms:
+  - target: <OS及原生框架或引擎>
+    units: <布局单位及像素换算>
+    orientation: <本轮方向>
+    reference_sizes:
+      - device: <所选设备或参考画面>
+        pt: [375, 667] # 按实际选择pt/dp/px，不能照搬示例尺寸
+    locale: <语言>
+screens:
+  - id: <screen>
+    states: [<state>]
+    handoff_path: handoff.md
+states:
+  - id: <screen/state>
+    reference: references/default.png
+    parameters: <如与参考相同布局，写出明确变化参数>
+flows:
+  - id: <flow>
+    from: <screen/state>
+    trigger: <操作>
+    to: <screen/state>
+    behavior_ref: <原AC或真实工程行为>
+coverage:
+  - behavior_ref: <原AC或真实工程行为，不造R编号>
+    screen_states: [<screen/state>]
+dependencies: [] # 使用共享UI时填其 approved_release_ref，含repository/commit/path/sha256
+files:
+  - path: brief.md
+    media_type: text/markdown
+    sha256: <实际摘要>
+    bytes: <实际字节数>
+    purpose: scope
+    required_for_engineering: true
+    # 图片另填dimensions_px: [宽, 高]；handoff写明倍率及布局单位。
+  # 必须逐项列出全部交付文件：handoff、tokens、sources、references、assets等。
+  # 除本清单外，包内文件集合须与files完全相等；相对路径不得逃逸。
+asset_inputs: [] # source_ref/license/transform/outputs；原owner填kind/id/manifest_ref/record_pointer
+external_objects: [] # 必需大媒体填不可变对象版本、真实字节摘要/尺寸及恢复方法
+acceptance:
+  handoff_path: handoff.md
+  expected_ref:
+    repository: <独立预期仓库身份>
+    commit: <已有完整提交>
+    path: <独立预期文件>
+    sha256: <实际64位摘要>
+  required_states: [<screen/state>]
+  allowed_differences: []
+limitations: []
+open_questions: [] # 条目为id/description/blocker，可加resolution_ref；未解决blocker拒绝

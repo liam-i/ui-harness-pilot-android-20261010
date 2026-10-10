@@ -1,0 +1,11 @@
+{
+  "name": "ui-harness-android-menu",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "spec": "HARNESS_OPENSPEC_SOURCE=local bash scripts/openspec.sh"
+  },
+  "devDependencies": {
+    "@fission-ai/openspec": "1.12.0"
+  }
+}

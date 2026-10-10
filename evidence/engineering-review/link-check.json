@@ -1,0 +1,587 @@
+[
+  {
+    "source": "README.md",
+    "link": "cocos-real-ci/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-acceptance-20261009.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-archive-user-authorization-20261009.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-local-closeout/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "figma-android-design/review/approval/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-input-blocked-audit.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-blocked-goal-result.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-closeout-blocked-audit.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-closeout-blocked-goal-result.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-archive-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "confirmed-plan.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "documentation-change.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "documentation-checks.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-acceptance-20261009.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "unity-preparation/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "environment-readback-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-prototype-review-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-prototype-review-03.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-export-checks-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-stop-recovery-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-reopen-check-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-preflight/native-compile-check.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-m1-compile-01/result.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-android-preflight/native-artifact-and-runtime.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-android-preflight/scene-readiness-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "jdk-installation.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "gradle-installation.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-preflight/build-artifact.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-preflight/small-runtime.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-preflight/regular-runtime.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-candidate-read-04.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-prototype-review-04.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-stop-recovery-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-reopen-check-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "open-design-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "od-candidate-fixed-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "open-design-review/recovery-check.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "open-design-review/approval/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-owned-device-cleanup-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "ci-endpoints-readback-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "blocked-audit-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "resumed-blocked-audit-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "resumed-blocked-goal-result.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "open-design-review/approval/design-approved.bundle",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-engineering-review/user-authorization-20261009.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "design-publication-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-propose-gate-01.result.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-local-apply/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-local-apply/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-ci-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-ci-user-authorization-20261009.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-real-ci/summary.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-real-ci/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-real-ci/consumer-progress.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-acceptance-20261009.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-local-closeout/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-acceptance-tasks.txt",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-runtime-acceptance-checks.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-archive-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-archive-review-request.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-archive-review/remote-readback-02.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-ci-final-remote-readback.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "cocos-ci-delivery-checks.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "resume-remaining-tasks-01.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "unity-preparation/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "figma-android-design/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "figma-android-design/review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "figma-android-design/resume.json",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "figma-android-design/review/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "figma-android-design/review/approval/README.md",
+    "exists": true
+  },
+  {
+    "source": "README.md",
+    "link": "android-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "review/approval/README.md",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "../android-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "resume.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "native-goal-blocked-result.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "pending-design-blocked-audit.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "native-goal-after-design-approval.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "start.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "/private/tmp/ui-reconciliation-20261009-kd2a3glf/figma-android-design/design/brief.md",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "prompt-01.txt",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "iteration-01-review.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "iteration-01/",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "prompt-02.txt",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "source-version-03.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "native-recovery-03.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "exports-check-03.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "export-failure-recovery.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "review/candidate-closure.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "review/recovery-check.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "review/publication-inventory.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/README.md",
+    "link": "review/approval/README.md",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "approve-U001.yaml",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "user-approval-U001.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "verification.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "publication.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "design-approved.bundle",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "../README.md",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "reviewed-README.md",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "reviewed-publication-inventory.json",
+    "exists": true
+  },
+  {
+    "source": "figma-android-design/review/approval/README.md",
+    "link": "../../../android-engineering-review/README.md",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/validation.md",
+    "link": "../figma-android-design/review/inputs/expected.json",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "../figma-android-design/review/approval/README.md",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "../figma-android-design/review/inputs/expected.json",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "change/proposal.md",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "change/specs/android-menu/spec.md",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "change/design.md",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "change/tasks.md",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "validation.md",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "inputs.json",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "review-manifest.json",
+    "exists": true
+  },
+  {
+    "source": "android-engineering-review/README.md",
+    "link": "../../../../../templates/ui-design/skills/ui-design-workflow/SKILL.md",
+    "exists": true
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "kind": "native-android-engineering-review-manifest",
+  "prepared_at": "2026-10-10T02:07:16.605903+00:00",
+  "scope": "Engineering plan including explicit typography interpretation; local Apply authorization only, no new remote publication or runtime acceptance",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 6382,
+      "sha256": "72b23626b70007db8292f25e24e58d53ccb0eb0290e07721d68ee149282642fe"
+    },
+    {
+      "path": "change/proposal.md",
+      "bytes": 1378,
+      "sha256": "a26cc8c6da9c1bc042e4929ac3b57ad30574b65dbd6c59f4e2c90f9e7ba55252"
+    },
+    {
+      "path": "change/design.md",
+      "bytes": 7572,
+      "sha256": "b6de0ee772be2a0bd7f0f76c16bbbc53252735be8d42fc43ffd4023ced417a87"
+    },
+    {
+      "path": "change/specs/android-menu/spec.md",
+      "bytes": 3676,
+      "sha256": "d892328c14b57b0a48fe46ca50597912d0e34c89a206fd36e423a0c6d56136b1"
+    },
+    {
+      "path": "change/tasks.md",
+      "bytes": 2065,
+      "sha256": "bea05161a224a6cf6fabc084643cf3ebee93d26cbdaa3320bf2fbe7d829e7a44"
+    },
+    {
+      "path": "validation.md",
+      "bytes": 7072,
+      "sha256": "1e46fdffcc03e6df804075fe196060059c98af3bd22b50ad2a58b455345f0552"
+    },
+    {
+      "path": "inputs.json",
+      "bytes": 17003,
+      "sha256": "56f12abd9f73d25e40831c70bc142f8c19c3dd43cf6afad80dcf19a8cbfecdc1"
+    },
+    {
+      "path": "sdk-api-observation.json",
+      "bytes": 6832,
+      "sha256": "cd65e8eaa1d16241e89fb6818ddc411ce1caf85140b8bf0e4f49ce69c62fe1d3"
+    }
+  ],
+  "engineering_approval": null,
+  "apply_started": false,
+  "immutable_design_D": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+    "path": "design/units/UI-FIGMA-ANDROID-MENU/releases/U001/manifest.yaml",
+    "sha256": "f14d153cd88a8d60a898c414876eec1f440520855840ee323c288d3da0f0cb55"
+  },
+  "actual_design_A": {
+    "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+    "commit": "c6f8cb0b1bb9db34cf894a383092dee4d5bdbc8d",
+    "path": "design/units/UI-FIGMA-ANDROID-MENU/decisions/approve-U001.yaml",
+    "sha256": "aefb9518a4e0cfbb7db96f2082ebf13be29775c2a2c97efc256d830b236ed002"
+  },
+  "expected_cases": {
+    "devices": 2,
+    "per_device": 16,
+    "total": 32,
+    "flows": 18,
+    "states": 7
+  },
+  "note": "Original planning files remain frozen after human review; actual Change is sole execution task source. Validate this inventory and original fixed design before resuming."
+}

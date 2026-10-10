@@ -1,0 +1,74 @@
+{
+  "schema_version": "ui-policy/1",
+  "adoption": {
+    "ui": "enabled",
+    "requirements": "not-adopted"
+  },
+  "required_capabilities": [
+    "fixed-objects",
+    "strict-models",
+    "historical-decisions",
+    "current-observation"
+  ],
+  "authorities": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "remote": "https://github.com/liam-i/ui-harness-pilot-design-20261008.git",
+      "ref": "refs/heads/main",
+      "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+      "decision_glob": "design/units/*/decisions"
+    }
+  ],
+  "actors": [
+    {
+      "actor": "current user in thread 01a0f10c-f08d-7020-bf06-8fabf6ed4b46",
+      "roles": [
+        "product",
+        "ui"
+      ],
+      "evidence_refs": [
+        {
+          "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+          "commit": "db1d8d36482883a46f6624c02cde4241547f3d18",
+          "path": "design/units/UI-CALCULATOR/decisions/user-approval-U001.json",
+          "sha256": "6bd21a75e160955cbdd1c8f9c7a2399fbc3a3232cca80785cae279805de34b7f"
+        }
+      ]
+    }
+  ],
+  "required_roles": {
+    "approve": [
+      "product",
+      "ui"
+    ],
+    "withdraw": [
+      "product",
+      "ui"
+    ],
+    "supersede": [
+      "product",
+      "ui"
+    ]
+  },
+  "basis_refs": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "99526d0a38689138bd81fcd8f09e9693502d7d41",
+      "path": "inputs/authority.md",
+      "sha256": "8c84263dc8ad1db635d66336b2b08d7a76d2f673396e3d670dbb1c21b950b5ef"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "77edfd556a27df96afb16197fe3f59bb48ead340",
+      "path": "inputs/supplementary-20261009/authority.md",
+      "sha256": "b39875c1b6c6d86795f66b55be755857d8bb6dabb61e68c310ff9233fc25498f"
+    },
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "commit": "03eefa28dc36a22e807a5c8147359ddf0be97d9f",
+      "path": "reviews/supplementary-20261009/policy.json",
+      "sha256": "bba599d11d0e6d6be602e2fdef50f785483b243910ecd193ca13cfbdb4ba9753"
+    }
+  ],
+  "retention": "Approved design and authority history retained in the reviewed bundle and public authority; native consumer and engineering review retained in this isolated repository and supplementary evidence. Observe authority before each action."
+}
