@@ -7,7 +7,7 @@
 
 ## 2. 实现固定消费者
 
-- [ ] 2.1 按 Apply/TDD 实现 MenuState 的冷启动、New／Continue、Menu、重置／取消及 best=0 分支，保留真实 RED／GREEN。
+- [x] 2.1 按 Apply/TDD 实现 MenuState 的冷启动、New／Continue、Menu、重置／取消及 best=0 分支，保留真实 RED／GREEN。
 - [ ] 2.2 导入固定 PNG／tokens，实现原生七状态、布局、两档字体及资源链，遵守原允许差异。
 - [ ] 2.3 接入 Back／Home／方向／Insets、可访问节点及调试只读观察，禁止测试状态注入。
 
@@ -29,3 +29,4 @@
 ## 执行记录
 
 - 2026-10-10：真实工程批准、propose/start current、OpenSpec 严格校验及固定文件导出通过。证据见 `evidence/engineering-review/`；业务实现尚未开始。
+- Task 2.1：`evidence/tdd/{initial,session,reset,back}-{red,green}` 保存真实行为断言及源副本；最后 6 项 Java 状态测试通过，未计入设备用例。
