@@ -1,0 +1,63 @@
+{
+  "schema_version": "ui-snapshot/1",
+  "mode": "current",
+  "action": "resume",
+  "rules": {
+    "version": "ui-check/1",
+    "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+  },
+  "repositories": {
+    "ui-harness-android-menu-20261010": "/private/tmp/ui-reconciliation-20261009-kd2a3glf/android-menu",
+    "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority": "/private/tmp/ui-reconciliation-20261009-kd2a3glf/design-authority"
+  },
+  "policy_ref": {
+    "repository": "ui-harness-android-menu-20261010",
+    "commit": "76fbfcde5aec775ccb51b2c58c0e9f35042d37e9",
+    "path": "harness/ui-design/config/project.json",
+    "sha256": "3df16f27219bffb638e8eaa0955afa26553d569ed9607b8d71b9d42c57118791"
+  },
+  "authorities": [
+    {
+      "repository": "/private/tmp/ui-workflow-p0-20260930-u8jw1kyx/work/ui-authority",
+      "ref": "refs/heads/main",
+      "history_root": "a6bc9fb40ff11bdfe7190273b97ebb6901f9ad52",
+      "commit": "c6f8cb0b1bb9db34cf894a383092dee4d5bdbc8d"
+    }
+  ],
+  "bindings_ref": {
+    "repository": "ui-harness-android-menu-20261010",
+    "commit": "2741f67299c9687bd4e955b305bec3cf036bb74e",
+    "path": "openspec/changes/consume-approved-android-menu/ui-bindings.json",
+    "sha256": "8c20b93a1fa9ec9855e2302159dfea4df8a75b76daf2abe02ff08d7d82181cd0"
+  },
+  "subject": {
+    "kind": "change",
+    "id": "consume-approved-android-menu",
+    "head": {
+      "repository": "ui-harness-android-menu-20261010",
+      "commit": "27b593303b451f39f02f8b5a9a255f1cf05662ca"
+    }
+  },
+  "selections": [
+    {
+      "consumer": {
+        "kind": "change",
+        "subject": "consume-approved-android-menu",
+        "record_ref": {
+          "repository": "ui-harness-android-menu-20261010",
+          "commit": "1005a464c1b3be70c004223c990ff58eeb0ae7a9",
+          "path": "openspec/changes/consume-approved-android-menu/proposal.md",
+          "sha256": "a26cc8c6da9c1bc042e4929ac3b57ad30574b65dbd6c59f4e2c90f9e7ba55252"
+        }
+      },
+      "behaviors": [
+        "Approved design consumption",
+        "Menu and session behavior",
+        "Android lifecycle and input",
+        "Bounded presentation and evidence"
+      ],
+      "consumption": "new"
+    }
+  ],
+  "external_files": []
+}
