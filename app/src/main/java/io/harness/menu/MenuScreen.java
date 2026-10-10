@@ -114,7 +114,7 @@ public final class MenuScreen extends FrameLayout {
         TextView label=text(reset,"reset-label","Reset best score","button","ink",large()?83:103.5f,large()?32:30,contentWidth-(large()?83:103.5f),false,0);
         label.setImportantForAccessibility(IMPORTANT_FOR_ACCESSIBILITY_NO);
         float footerY=compact?mainY+mainHeight+12:bottom-footer;
-        text(content,"footer","Small moves. Fresh possibilities.","body","secondary_text",left,footerY+(large()?22:16),contentWidth,true,0);
+        text(content,"footer","Swipe. Combine. Keep going.","body","secondary_text",left,footerY+(large()?22:16),contentWidth,true,0);
     }
     private void session(FrameLayout content) {
         float header=large()?(compact?213:217):170;
@@ -123,12 +123,12 @@ public final class MenuScreen extends FrameLayout {
         float menuY=bottom-56;
         float boardY=compact?top+header+8:top+header+(menuY-top-header-264)/2;
         if(compact)menuY=boardY+264+8;
-        FrameLayout board=panel(content,"board",(width-264)/2,boardY,264,264,"border",20,false);
+        FrameLayout board=panel(content,"board",(width-264)/2,boardY,264,264,"panel",20,true);
         for(int i=0;i<4;i++) {
-            FrameLayout tile=panel(board,"tile-"+i,12+(i%2)*126,12+(i/2)*126,114,114,i<2?"paper":"panel",12,false);
+            FrameLayout tile=panel(board,"tile-"+i,12+(i%2)*126,12+(i/2)*126,114,114,i<2?"paper":"cream",12,false);
             if(i<2)text(tile,"tile-value-"+i,"2","tile","ink",0,large()?74.5f:70.5f,114,true,0);
         }
-        Control back=control(content,"menu-back","Menu",left,menuY,contentWidth,56,"accent",false,state::menu);
+        Control back=control(content,"menu-back","Menu",left,menuY,contentWidth,56,"panel",true,state::menu);
         buttonText(back,"menu-label","Menu",contentWidth,large()?36:34);
     }
     private void modal() {
