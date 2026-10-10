@@ -2,8 +2,8 @@
 
 ## 1. 固定工程入口
 
-- [ ] 1.1 保存本组真实工程审核及本地 Apply 请求，含字号解释；核对远端 D/A、完整历史、policy 与工具身份。
-- [ ] 1.2 在新隔离工程固定原任务并通过 current propose，落入本 Change；固定 Proposal／Review／bindings 后通过 current start。
+- [x] 1.1 保存本组真实工程审核及本地 Apply 请求，含字号解释；核对远端 D/A、完整历史、policy 与工具身份。
+- [x] 1.2 在新隔离工程固定原任务并通过 current propose，落入本 Change；固定 Proposal／Review／bindings 后通过 current start。
 
 ## 2. 实现固定消费者
 
@@ -25,3 +25,7 @@
 - [ ] 4.4 更新唯一补充汇总及准确支持范围；Figma 读、写分别记证，Android／Unity 各自验收，不因本分支通过宣称整轮完成。
 
 这份文件落入实际 Change 后是唯一实施清单。当前审核复本不勾选进度；执行日志和下一动作回实际 Change，不能再造并行 Tasks。
+
+## 执行记录
+
+- 2026-10-10：真实工程批准、propose/start current、OpenSpec 严格校验及固定文件导出通过。证据见 `evidence/engineering-review/`；业务实现尚未开始。

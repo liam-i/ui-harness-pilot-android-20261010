@@ -1,0 +1,120 @@
+{
+  "kind": "independent-native-android-design-acceptance-draft",
+  "status": "fixed behavior expectations before implementation; exact driver and timeouts must be reviewed before Apply",
+  "framework": "native Android",
+  "source": "design/brief.md and the authorized supplementary validation scope",
+  "required_states": [
+    "menu/default",
+    "menu/resumable",
+    "menu/zero-empty",
+    "menu/zero-resumable",
+    "dialog/reset-empty",
+    "dialog/reset-resumable",
+    "session/active"
+  ],
+  "devices": {
+    "small": {
+      "pixels": [
+        720,
+        1280
+      ],
+      "density_dpi": 320,
+      "api": 37,
+      "abi": "arm64-v8a",
+      "system_image_package": "system-images;android-37.1;google_apis_playstore_ps16k;arm64-v8a",
+      "page_size_bytes": 16384,
+      "fingerprint": "google/sdk_gphone16k_arm64/emu64a16k:17/CP31.260618.005/15731206:user/dev-keys"
+    },
+    "regular": {
+      "pixels": [
+        1080,
+        2400
+      ],
+      "density_dpi": 420,
+      "api": 37,
+      "abi": "arm64-v8a",
+      "system_image_package": "system-images;android-37.1;google_apis_playstore_ps16k;arm64-v8a",
+      "page_size_bytes": 16384,
+      "fingerprint": "google/sdk_gphone16k_arm64/emu64a16k:17/CP31.260618.005/15731206:user/dev-keys"
+    }
+  },
+  "cases_per_device": 16,
+  "total_device_cases": 32,
+  "cases": [
+    {
+      "id": "A01",
+      "expect": "Cold start shows the exact menu labels, best 128, no session and a disabled Continue action."
+    },
+    {
+      "id": "A02",
+      "expect": "Tapping disabled Continue leaves the initial menu unchanged."
+    },
+    {
+      "id": "A03",
+      "expect": "New game creates a session and shows the static 2x2 preview with two 2 tiles, Session started. and Menu."
+    },
+    {
+      "id": "A04",
+      "expect": "Menu returns to best 128 with Continue enabled and retains the created session."
+    },
+    {
+      "id": "A05",
+      "expect": "Continue resumes the identical session. Evidence must prove retained identity, not merely an identical screenshot."
+    },
+    {
+      "id": "A06",
+      "expect": "Without a session, opening reset then cancelling preserves best and disabled Continue; modal blocks background interaction."
+    },
+    {
+      "id": "A07",
+      "expect": "Without a session, confirming reset sets best to 0 and leaves Continue disabled."
+    },
+    {
+      "id": "A08",
+      "expect": "With a session, cancelling reset preserves best and the session identity; Continue remains enabled."
+    },
+    {
+      "id": "A09",
+      "expect": "With a session, confirming reset sets best to 0 and Continue resumes the original session identity."
+    },
+    {
+      "id": "A10",
+      "expect": "After resetting without a session, New game still creates a fresh session; best stays 0 and the modal is gone."
+    },
+    {
+      "id": "A11",
+      "expect": "Android Back cancels a modal, returns from session to menu, then leaves the root menu for the system; each transition retains the appropriate data."
+    },
+    {
+      "id": "A12",
+      "expect": "Home then return with the process alive restores menu, session or modal state and current values; a genuinely new process returns to the declared initial state."
+    },
+    {
+      "id": "A13",
+      "expect": "A requested orientation change preserves portrait presentation, state and safe touch areas."
+    },
+    {
+      "id": "A14",
+      "expect": "At font scale 1.0, all seven states have the approved text, palette, layout and resources; visible actionable areas remain inside actual system insets, at least 48 dp and non-overlapping."
+    },
+    {
+      "id": "A15",
+      "expect": "At font scale 1.3, all seven states preserve scaled text, readability, safe areas and access to every required control; no glyph clipping, hidden required action or whole-screen shrinking."
+    },
+    {
+      "id": "A16",
+      "expect": "The actual APK contains and uses the frozen exported icon/resource bytes and declared tokens; native accessibility exposes names, disabled state and modal scope; original device settings are restored."
+    }
+  ],
+  "proof_requirements": [
+    "Freeze actual source SHA, APK digest, system image and serial before recording runtime results.",
+    "State identity must come from approved read-only observation or instrumentation, never test state injection.",
+    "Keep per-case assertions, actual screenshots for states and font variants, logs and nonzero test counts.",
+    "Failure, missing evidence, skip, cancellation, zero cases and timeout cannot count as success.",
+    "Use one actual CI normal run, one real platform failure or mandatory-step skip with blocking, and recovery; validate common input rejection in the adopted CI path.",
+    "Keep native runtime, Figma design inspection and actual human approval as separate evidence."
+  ],
+  "human_design_approval": null,
+  "engineering_review": null,
+  "runtime_result": null
+}
