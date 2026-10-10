@@ -48,6 +48,11 @@
       "base": "sdk",
       "relative": "system-images/android-37.1/google_apis_playstore_ps16k/arm64-v8a/source.properties",
       "sha256": "1d3f8955ae6e7b460b468cba1091d55af7e2a8847a30c300dc640190621cb8dc"
+    },
+    {
+      "base": "gradle_cache",
+      "relative": "caches/modules-2/files-2.1/com.android.tools.build/gradle/8.13.2/5975ee61ee7e3f9413fbe10270f230cfb6d227fc/gradle-8.13.2.jar",
+      "sha256": "e494f7ce75ca6c1abff301d4a70b18fdd3d6af855875f4f85082bb7608f041de"
     }
   ]
 }

@@ -1,7 +1,7 @@
 """Synthetic gate rejection tests; never substitute for native or hosted CI evidence."""
 from pathlib import Path
 from copy import deepcopy
-import importlib.util,unittest
+import importlib.util,unittest,json,sys,tempfile,subprocess
 
 spec=importlib.util.spec_from_file_location('android_ci',Path(__file__).resolve().parents[2]/'harness/ui-design/ci/android-native.py')
 runner=importlib.util.module_from_spec(spec);spec.loader.exec_module(runner)
@@ -78,5 +78,19 @@ class ResultContractTests(unittest.TestCase):
         with self.assertRaises(ValueError):self.verify()
         with self.assertRaises(ValueError):runner.verify_native({},self.runtime,self.expected,self.head)
         with self.assertRaises(ValueError):runner.verify_native(self.build,{},self.expected,self.head)
+    def test_actual_nonzero_process_retains_exit(self):
+        with tempfile.TemporaryDirectory(prefix='android-ci-exit-') as folder:
+            out=Path(folder)
+            with self.assertRaises(ValueError):runner.run_command([sys.executable,'-c','raise SystemExit(7)'],out,out,'probe',5)
+            self.assertEqual(json.loads((out/'probe.command.json').read_text())['exit'],7)
+    def test_actual_timeout_retains_interruption(self):
+        with tempfile.TemporaryDirectory(prefix='android-ci-timeout-') as folder:
+            out=Path(folder)
+            with self.assertRaises(subprocess.TimeoutExpired):runner.run_command([sys.executable,'-c','import time; time.sleep(30)'],out,out,'probe',.1)
+            r=json.loads((out/'probe.command.json').read_text());self.assertTrue(r['interrupted']);self.assertIsNotNone(r['exit'])
+    def test_actual_missing_apk_rejects(self):
+        with tempfile.TemporaryDirectory(prefix='android-ci-missing-') as folder:
+            out=Path(folder);self.build['apk']['path']=str(out/'missing.apk')
+            with self.assertRaises(FileNotFoundError):runner.verify_artifacts(out,out,self.build,self.runtime,self.expected)
 
 if __name__=='__main__':unittest.main()

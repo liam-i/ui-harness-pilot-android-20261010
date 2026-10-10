@@ -97,8 +97,13 @@ class Suite:
         assert raw.startswith(b'\x89PNG\r\n\x1a\n');(self.out/(name+'.png')).write_bytes(raw)
         self.shots.append({'case':self.current,'path':name+'.png','sha256':hashlib.sha256(raw).hexdigest(),'state':o and o['state']});return raw
     def snapshot(self,name,o):
-        raw=self.screenshot(name,o);xml=self.xml(name)
-        (self.out/(name+'.json')).write_text(json.dumps(o,indent=2)+'\n');return raw,xml
+        xml=self.xml(name)
+        # Accessibility query completes first; then require another real draw of the same state.
+        # Capturing immediately after CPU onDraw can still read the previous compositor buffer.
+        fresh=self.observe(lambda v:v['state']==o['state'] and v['frame']>o['frame'],o['capturedAt'])
+        self.check('layout stable across native frames',fresh['nodes']==o['nodes'],True)
+        raw=self.screenshot(name,fresh)
+        (self.out/(name+'.json')).write_text(json.dumps(fresh,indent=2)+'\n');return raw,xml
     def menu_assert(self,o):
         for name,text in COPY.items():self.check('exact '+name,self.node(o,name)['text']['copy'],text)
         self.check('best label',self.node(o,'best')['text']['copy'],str(o['state']['best']))
