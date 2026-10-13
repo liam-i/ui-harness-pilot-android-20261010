@@ -15,8 +15,10 @@
 | [authority.md](authority.md) | 人工权威约定；固定policy必须有真实审阅依据 |
 | [manual-checklist.md](manual-checklist.md) | 制作、审定、取包、工程消费、验收与恢复操作 |
 | [文件适配器](adapters/files.md) | A 接收／B 本地制作；获批 Git 文件的只读取包与新目录导出 |
+| [Figma 浏览器](adapters/figma-browser.md)／[open-design](adapters/open-design.md) | 已声明通道的制作、源一致性、完整媒体与独立恢复；MCP／自动安装边界分别说明 |
 | [UI Skill](skills/ui-design-workflow/SKILL.md) | 按所选设计角色与工程角色接续；复制到业务 `.agents/skills/ui-design-workflow/`，同时保留本目录在 `harness/ui-design/` |
-| [平台 CI](ci/README.md) | iOS 已有限定真实 Job；Cocos Android 已完成限定 GitHub 正向、故障阻断、恢复、运行人审及本地归档，PR 尚未合并。目标项目的门禁须另行实际验收 |
+| [平台 CI](ci/README.md) | iOS、原生 Android、Cocos Android 的限定 GitHub 试点、设备与入口；目标项目的门禁须另行实际验收 |
+| [需求 Gate 联合 CI 准备](ci/requirements.md) | 同一 venv 双锁、外国仓库／媒体恢复与原 Gate；不代替原生 Job 或完整托管资格验收 |
 | [离线检查](offline-check.md) | 隔离安装、薄入口、固定快照、输出和失败恢复 |
 | [当前观察](current-check.md)／[无需求层接线](no-requirements.md) | 独立权威查询、动作前复查、原Change／任务／PR与失败恢复 |
 | [需求层接线](requirements.md) | 原贡献／任务、工程Review、实际E、G2/G3/G4当前组合及恢复；完整采用仍受验证边界限制 |

@@ -9,7 +9,7 @@
     "action": "pre-merge",
     "rules": {
       "version": "ui-check/1",
-      "sha256": "86f8ede38d0ecc841e590bf08db6462a05916cda044284f0ac0b296dec529fe5"
+      "sha256": "7654e89e41e9cbde1439d4ee353d8f0cbccb17112e1cbf10ed7752aac2e32154"
     },
     "authorities": [
       {
