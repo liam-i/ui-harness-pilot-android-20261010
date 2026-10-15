@@ -1,0 +1,23 @@
+{
+  "recorded_at": "2026-10-10T06:01:33.119271+00:00",
+  "source": "Actual human reply in this conversation",
+  "question_item_id": [
+    "request_user_input_async",
+    "call_d6cfe25615554742a8d7bf5f93693c10",
+    0
+  ],
+  "answer": "运行验收通过，允许按审核页本地收尾",
+  "review_manifest_sha256": "104ae7f78802a3c1770f2819bf3850032a7570a38dc3b82ddea1103cad5c37a2",
+  "native_tested_head": "22ba5e4faf2ed031c83c8abad95c82dcbc1535cd",
+  "apk_sha256": "1c59d3e92134df751d480d567a8fbe5db51d8ae635e97461f44ca317903ab73b",
+  "design_D": "0c2b7c404648f448c794769357b7ed3c8abd013f",
+  "approval_A": "c6f8cb0b1bb9db34cf894a383092dee4d5bdbc8d",
+  "runtime_human_accepted": true,
+  "local_evidence_commits_authorized": true,
+  "local_spec_sync_and_archive_authorized": true,
+  "scope": "Only the concrete operations listed in the approved runtime/local-closeout review; keep Tasks 4.3/4.4 open until actual completion; preserve all original review bytes and failure history",
+  "push_authorized": false,
+  "merge_authorized": false,
+  "release_authorized": false,
+  "main_repository_commit_authorized": false
+}
